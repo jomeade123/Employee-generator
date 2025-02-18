@@ -2,16 +2,22 @@
   "name": "employee-tracker",
   "version": "1.0.0",
   "description": "A command-line application to manage a company's employee database.",
-  "main": "src/app.ts",
+  "main": "src/dist/app.js",
+  "type": "module",
   "scripts": {
-    "start": "ts-node src/app.ts",
+    "start": "npm run build && node dist/app.js",
     "build": "tsc",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/pg": "^8.11.11",
+    "dotenv": "^16.4.7",
     "inquirer": "^8.2.6",
     "pg": "^8.13.2",
-    "queries": "^0.1.0"
+    "queries": "^0.1.0",
+    "query": "^0.2.0",
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",
